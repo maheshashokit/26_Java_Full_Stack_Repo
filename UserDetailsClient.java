@@ -19,6 +19,9 @@ public class UserDetailsClient {
 		System.out.println("Username :::::" + ud.getUsername());
 		System.out.println("Password :::::" + ud.getPassword());
 		
+		String st = "10";
+		Integer intValue = Integer.valueOf(st);
+		System.out.println("Integer Value:::::" + intValue);
 		sc.close();
 	}
 }

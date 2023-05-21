@@ -1,11 +1,9 @@
-public class Customer extends Person {
+package FunctionalInterfaces;
+public class Customer{
 
 	public String customerId;
 	public String cityName;
 	public double billAmount;
-	
-	//Has-a Relationship Example demonstration
-	Address add = new Address();
 	
 	//Non-Parameterized Constructor
 	public Customer() {
@@ -19,9 +17,6 @@ public class Customer extends Person {
 		this.cityName = cityName;
 		this.billAmount = billAmount;
 	}
-
-
-
 	//Java method for setting values to customer object
 	public void setCustomerDetails(String customerId, String cityName, double billAmount) {
 		this.customerId = customerId;

@@ -1,7 +1,7 @@
 package FunctionalInterfaces;
 
-@FunctionalInterface
-public interface PasswordTest {
+//Normal Interface
+public interface Payment {
 	
 	//Defining the default methods
 	default public void security() {
@@ -21,6 +21,9 @@ public interface PasswordTest {
 		System.out.println("Info Message" + message);
 	}
 	
-	public boolean verifyPassword(String password);
+	//Defining the abstract methods
+	public void doPayment();
+	
+	public void getTransactionDetails();
 
 }

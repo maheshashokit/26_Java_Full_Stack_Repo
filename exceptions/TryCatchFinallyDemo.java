@@ -31,7 +31,7 @@ public class TryCatchFinallyDemo {
 			System.out.println("Inside the Exception Block....");
 		}finally {
 			System.out.println("Finally Block executed......");
-			//if(sc != null) sc.close();	
+			if(sc != null) sc.close();	
 		}
 		System.out.println("Division Result:::::" + division);
 		System.out.println("Accessing Array Element:::::" + arrValue);

@@ -33,7 +33,9 @@ public class CustomerUserDefinedExceptionDemo {
 		}
 		
 		if(!customerSearch) {
+			if(sc != null) sc.close();
 			throw new CustomerNotFoundException("Customer Not Found with CustomerId %s" , searchCustomerId);
-		}
+		}		
+		if(sc != null) sc.close();
 	}
 }

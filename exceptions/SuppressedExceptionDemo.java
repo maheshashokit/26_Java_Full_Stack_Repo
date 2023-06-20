@@ -6,7 +6,8 @@ public class SuppressedExceptionDemo {
 		
 		try(MyResource resource = new MyResource()){
 			
-			resource.doSomething();
+			resource.doSomething();  //Exception during resource usage
+			//Exception during resource cleanup
 			
 		}catch(Exception e) {
 			System.out.println("Caught exception: " + e.getMessage());

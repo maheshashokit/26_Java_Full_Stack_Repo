@@ -2,7 +2,9 @@ package exceptions;
 
 //User defined Exception class
 public class CustomerNotFoundException extends RuntimeException {
-	
+
+	private static final long serialVersionUID = 1L;
+
 	//Defining the Constructors
 	public CustomerNotFoundException() {
 		//calling the super class public non-parameterized constructor

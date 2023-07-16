@@ -1,28 +1,27 @@
 package com.ashokit.collections;
 
-public class Employee implements Comparable<Employee>{
+public class Employee1{
 	
 	private Integer empId;
 	private String empName;
 	private String location;
 	private String gender;
 
-	public Employee() {
-		System.out.println("!23232323232323");
+	public Employee1() {
 	}
 	
-	public Employee(int empId, String empName) {
+	public Employee1(int empId, String empName) {
 		this.empId = empId;
 		this.empName = empName;
 	}
 	
-	public Employee(int empId, String empName,String location) {
+	public Employee1(int empId, String empName,String location) {
 		this.empId = empId;
 		this.empName = empName;
 		this.location = location;
 	}
 	
-	public Employee(int empId, String empName,String location,String gender) {
+	public Employee1(int empId, String empName,String location,String gender) {
 		this(empId,empName,location);
 		this.gender = gender;
 	}
@@ -59,14 +58,8 @@ public class Employee implements Comparable<Employee>{
 		return gender;
 	}
 	
-	
-	
 	@Override
-	public int compareTo(Employee obj) {
-		//below compareTo() is coming from java.lang.String class
-		//return this.getLocation().compareTo(obj.getLocation());
-		
-		//below compareTo() is coming from java.lang.String class
-		return this.getEmpId().compareTo(obj.getEmpId());
+	public String toString() {
+		return "EmployeeId="+empId+"&& EmployeeName="+empName;
 	}
 }

@@ -26,6 +26,7 @@ public class ProcessingEnumerationDemo {
 		}
 		
 		System.out.println("********************************************");
+		//Generating the 10 Random Numbers
 		Vector<Integer> numbers = new Vector<>();
 		for(int i = 1; i<=10;i++) {
 			numbers.add(new Random().nextInt(1000, 1500));

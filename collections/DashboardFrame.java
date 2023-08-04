@@ -47,6 +47,8 @@ public class DashboardFrame extends JFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				DashboardFrame dbf  = new DashboardFrame();
+				dbf.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(312, 171, 109, 38);

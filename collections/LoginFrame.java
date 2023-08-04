@@ -15,6 +15,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class LoginFrame extends JFrame {
 
@@ -78,6 +80,11 @@ public class LoginFrame extends JFrame {
 		contentPane.add(passwordField);
 		
 		JButton loginButton = new JButton("Login");
+		loginButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+			}
+		});
 		loginButton.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
@@ -103,7 +110,6 @@ public class LoginFrame extends JFrame {
 				System.out.println("Inside the Cancel Button....");
 				usernameTextField.setText("");
 				passwordField.setText("");
-				 
 			}
 		});
 		cancelButton.setFont(new Font("Tahoma", Font.BOLD, 18));

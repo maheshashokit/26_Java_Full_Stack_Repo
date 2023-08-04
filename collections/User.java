@@ -1,14 +1,28 @@
 package com.ashokit.collections;
 
 public class User {
+	
+	enum UserStatus{
+		 ACTIVE,
+		 INACTIVE;
+	} 
 
 	private String username;
 	
 	private String password;
 	
+	//Status is an enum
+	private Status status;
+	
 	public User(String username, String password) {
 		this.username = username;
 		this.password = password;
+	}
+	
+	public User(String username,String password,Status status) {
+		this.username = username;
+		this.password= password;
+		this.status = status;
 	}
 
 	public void setUsername(String username) {
@@ -27,25 +41,18 @@ public class User {
 		return password;
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		//will add the logic for content comparsion of user objects
-		System.out.println("Overriding the equals().......");
-		if (this == obj)
-            return true;
-        if (obj == null || getClass() != obj.getClass())
-            return false;
-       
-        User user = (User) obj;
-        
-        return this.username.equals(user.username) && this.password.equals(user.getPassword());
+	public void setStatus(Status status) {
+		this.status = status;
 	}
 	
+	public Status getStatus() {
+		return status;
+	}
+
 	@Override
-	public int hashCode() {
-		System.out.println("HashCode Method.....");
-        int result = this.username.hashCode();
-        result = 31 * result + this.password.hashCode();
-        return result;
-    }
+	public String toString() {
+		return "User [username=" + username + ", password=" + password + ", status=" + status + "]";
+	}
+	
+	
 }

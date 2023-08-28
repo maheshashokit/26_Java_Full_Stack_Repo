@@ -30,7 +30,7 @@ public class EmployeeSalarySelectDemo {
 				//processing the ResultSet Object
 				while(rs.next()) {
 					//processing the current row of ResultSet object
-					System.out.println(rs.getString(1) +"--"+ rs.getString(2)+"--"+ 
+					System.out.println(rs.getRow() +"---"+ rs.getString(1) +"--"+ rs.getString(2)+"--"+ 
 					                   rs.getString(3) +"--"+ rs.getString(4));
 				}
 			}catch(Exception e) {

@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Base64;
-import java.util.Base64.Decoder;
 import java.util.Base64.Encoder;
 
 //Checking the Database Connection is getting or not...
@@ -22,6 +21,7 @@ public class ConnectionTestJdbcProgram {
 			// Checking the connection object
 			if (con != null) {
 				System.out.println("Oracle Database Got Connected Successfully......");
+				System.out.println("Oracle Connection :::::" + con.getClass().getName());
 			}
 			
 			String value ="Mahesh@ashokit";

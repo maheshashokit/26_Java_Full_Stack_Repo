@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CartPage.html</title>
+</head>
+<body bgcolor="#3cb371">
+	<h4 style='text-align: center; color: yellow;'>Welcome To Ashok IT Using HttpSession Technique!!!!!!</h4>
+	<hr/>
+	<form action="addCartServlet" method="post">
+		<table align="center">
+			<tr>
+				<td>Items</td>
+				<td><select name="item" style="width: 105%;">
+						<option>Select</option>
+						<option value="Ram">RAM</option>
+						<option value="MobilePhone">MobilPhone</option>
+						<option value="Laptop">Laptop</option>
+						<option value="HardDisk">HardDisk</option>
+						<option value="Keyboard">Keyboard</option>
+						<option value="Mouse">Mouse</option>
+						<option value="Printer">Printer</option>
+						<option value="Scanner">Scanner</option>
+				     </select>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Quantity</td>
+				<td><input type="number" name="quantity" min="0" max="10" style="width:100%"/></td>
+			</tr>
+
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="Add To Cart" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

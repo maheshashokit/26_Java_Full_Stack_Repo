@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>registration.html</title>
+</head>
+<body>
+    <div style='text-align:center;color:red;'>
+    	<h4>Welcome To AshokIT For Course Enquiry Information.....</h4>
+    </div>
+    <form action="registration" method="post">
+	    <table align="center">
+	    	<tr>
+	    	  <td>Name</td>
+	    	  <td><input type="text" name="studentName" autocomplete="off"/></td>
+	    	</tr>
+	    	<tr>
+	    	  <td>EmailID</td>
+	    	  <td><input type="email" name="studentEmail" autocomplete="off"/></td>
+	    	</tr>
+	    	<tr>
+	          <td>ContactNo</td>
+	    	  <td><input type="text" name="studentContactNo" autocomplete="off"/></td>
+	    	</tr>
+	    	<tr>
+	    	   <td>Courses</td>
+	    	   <td>
+	    	     <select name="courses" style="width:100%">
+	    	     	<option value="">Select</option>
+	    	     	<option value="JFSD">Java FullStack</option>
+	    	     	<option value="PFSD">Python FullStack</option>
+	    	     	<option value="DFSD">Dotnet FullStack</option>
+	    	     	<option value="UFSD">UI FullStack</option>
+	    	     </select>
+	    	  </td>
+	    	</tr>
+	    </table>
+    <div style="text-align:center;margin-top:10px;">
+    	<input type="submit" value="Send Enquiry"/>
+    </div>
+    </form>
+</body>
+</html>

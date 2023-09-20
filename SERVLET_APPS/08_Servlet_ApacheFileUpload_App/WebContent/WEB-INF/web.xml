@@ -33,7 +33,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>UploadServlet2</servlet-name>
-    <url-pattern>/DownloadServlet</url-pattern>
+    <url-pattern>/download</url-pattern>
   </servlet-mapping>
   
 </web-app>

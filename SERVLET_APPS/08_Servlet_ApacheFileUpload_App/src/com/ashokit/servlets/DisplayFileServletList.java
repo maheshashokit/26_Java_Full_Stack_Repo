@@ -25,7 +25,7 @@ public class DisplayFileServletList extends HttpServlet {
 		int rowIndex = 1;
 		for (File file : files) {
 			pw.println("<tr><td>" + rowIndex + "</td><td>" + file.getName() + "</td><td>" + file.getAbsolutePath()
-					+ "</td><td><a href=DownloadServlet?fileName=" + file.getName() + ">|Download|</a></td></tr>");
+					+ "</td><td><a href=download?fileName=" + file.getName() + ">|Download|</a></td></tr>");
 			rowIndex++;
 		}
 		pw.println("</table>");

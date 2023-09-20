@@ -28,14 +28,14 @@ public class UploadServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		PrintWriter pw = response.getWriter();
-
-		String contentType = request.getContentType();
-		System.out.println("contentType::::" + contentType);
 		
+		PrintWriter pw = response.getWriter();
+	
+		//creating the object using Builder Design pattern
 		DiskFileItemFactory factory = DiskFileItemFactory.builder().setPath(Paths.get("E:\\uploadedFiles\\")).setBufferSize(1024*1024).get();
 				
 		JakartaServletDiskFileUpload upload = new JakartaServletDiskFileUpload(factory);
+		
 		try {
 			List<DiskFileItem> fileItems = upload.parseRequest(request);
 			for (DiskFileItem item : fileItems) {

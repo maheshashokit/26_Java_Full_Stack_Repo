@@ -1,0 +1,41 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>CustomTagDevelopment</short-name>
+	<uri>ashokit.com/customTags</uri>
+	
+	<tag>
+		<name>demo</name>
+		<tag-class>com.ashokit.handler.DemoTag</tag-class>
+		<body-content>EMPTY</body-content>
+		<attribute>
+			<name>user</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>displayText</name>
+		<tag-class>com.ashokit.handler.DisplayFontTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>font</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>size</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>fontWeight</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>customers</name>
+		<tag-class>com.ashokit.handler.CustomerDetailsTag</tag-class>
+		<body-content>EMPTY</body-content>
+	</tag>
+	
+</taglib>

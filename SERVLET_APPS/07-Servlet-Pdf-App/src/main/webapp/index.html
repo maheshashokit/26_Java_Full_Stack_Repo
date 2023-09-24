@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>index.html</title>
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#departmentName').change(function(){
+			//selected department name from department dropdown
+			var deptName = $('#departmentName').val();
+			//making Jquery AJAX call to servlet program based on URL Pattern
+			$.get('GetEmployees',{departmentName:deptName},function(data){
+				alert(data)
+				$('#employeeData').html(data);
+				$('#deptName').val(deptName);
+			});
+		});
+	});
+</script>
+<body>
+	<h3 style='text-align: center; color: red;'>Welcome To Ashok IT
+		Servlet - PDF Application</h3>
+	<hr/>
+	<div style='text-align: center;'>
+		<select name="department" id="departmentName">
+			<option value="All">All Department</option>
+			<option value="HR">Human Resource</option>
+			<option value="Sales">Sales</option>
+			<option value="Market">Marketing</option>
+			<option value="Production">Production</option>
+		</select>
+	</div><br/><br/>
+	<div style='text-align:center;' id="employeeData">
+	</div><br/>
+	<form action="EmployeeSavePdf" method="post">	
+		<div style='text-align:center;' id="pdfButton" class="hideElement">
+		    <input type="hidden" name="departmentName" id="deptName" value=""/>
+		    <input type="submit" value="SaveAsPdf" id="pdfButton"/>
+		</div>
+	</form>
+</body>
+</html>
